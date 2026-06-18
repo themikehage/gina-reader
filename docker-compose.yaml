@@ -1,8 +1,12 @@
 services:
   gina-reader:
     image: ghcr.io/jina-ai/reader:latest
-    ports:
-      - "8080:8080"
     environment:
       - PORT=8080
     restart: unless-stopped
+    networks:
+      - coolify
+
+networks:
+  coolify:
+    external: true
