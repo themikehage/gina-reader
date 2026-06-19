@@ -12,7 +12,7 @@ services:
       - traefik.http.routers.gina-reader.entrypoints=http,https
       - traefik.http.routers.gina-reader.tls=true
       - traefik.http.routers.gina-reader.tls.certresolver=letsencrypt
-      - traefik.http.services.gina-reader.loadbalancer.server.port=8080
+      - traefik.http.services.gina-reader.loadbalancer.server.port=8081
       - traefik.docker.network=coolify
 
 networks:
